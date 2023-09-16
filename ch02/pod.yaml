@@ -1,0 +1,19 @@
+# manifest script :
+# k8s API 버전과 정의하려는 리소스 유형 밝히며 시작
+apiVersion: v1
+kind: Pod
+
+# resource :
+  # meta data :
+  # 이름 (필수 요소), label (비필수 요소)
+metadata:
+  name: joisfe
+
+  # spec :
+  # resource의 실제 정의 내용
+  # pod 경우 실행할 container 지정 필요
+  # container는 이름과 이미지로 정의
+spec:
+  containers:
+    - name: web
+      image: kiamol/ch02-hello-kiamol
